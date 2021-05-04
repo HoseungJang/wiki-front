@@ -3,12 +3,12 @@ import useSWR from "swr";
 
 import { Github } from "../services/github";
 
-export function useMarkdown() {
+export function useMarkdown(path: string) {
   const history = useHistory();
 
   const { data } = useSWR(
-    decodeURIComponent(window.location.pathname.slice(1)) || "README.md",
-    async (path: string) => {
+    path,
+    async () => {
       try {
         return await Github.getContent(path);
       } catch (error) {
