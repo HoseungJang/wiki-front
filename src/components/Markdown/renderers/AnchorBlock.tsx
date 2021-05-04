@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Color } from "../../constants/color";
+
+import { Color } from "../../../constants/color";
 
 export function AnchorBlock(props: any) {
   return props.href.startsWith("#") ? (
