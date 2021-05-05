@@ -15,7 +15,7 @@ export function useMarkdown(path: string) {
         history.replace("/not-found");
       }
     },
-    { shouldRetryOnError: false }
+    { dedupingInterval: 3600 * 60, shouldRetryOnError: false }
   );
 
   return data ?? null;
