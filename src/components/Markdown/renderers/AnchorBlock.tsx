@@ -18,7 +18,7 @@ const S = {
     text-decoration: none;
 
     &:hover {
-      color: ${Color.Blue100};
+      color: ${Color.Blue200};
     }
   `,
   Hash: styled.a`
@@ -27,7 +27,7 @@ const S = {
     text-decoration: none;
 
     &:hover {
-      color: ${Color.Purple100};
+      color: ${Color.Purple200};
     }
   `,
 };
