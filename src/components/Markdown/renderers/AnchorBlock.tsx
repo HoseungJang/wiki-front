@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { Color } from "../../../constants/color";
@@ -6,14 +7,12 @@ export function AnchorBlock(props: any) {
   return props.href.startsWith("#") ? (
     <S.Hash href={props.href}>{props.children}</S.Hash>
   ) : (
-    <S.Path href={`${process.env.PUBLIC_URL}${props.href}`}>
-      {props.children}
-    </S.Path>
+    <S.Path to={props.href}>{props.children}</S.Path>
   );
 }
 
 const S = {
-  Path: styled.a`
+  Path: styled(Link)`
     font-weight: bold;
     color: ${Color.Blue300};
     text-decoration: none;
