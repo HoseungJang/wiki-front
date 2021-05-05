@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome, AiFillGithub } from "react-icons/ai";
 import { FaSun, FaMoon } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -18,6 +18,9 @@ export function Navigation() {
         <Link className="link" to="/">
           <AiFillHome className="icon" />
         </Link>
+        <a className="link" href="https://github.com/HoseungJang/wiki-front">
+          <AiFillGithub className="icon" />
+        </a>
       </div>
       <button
         className="theme-change-button"
@@ -73,6 +76,10 @@ const S = {
       > .link {
         width: 30px;
         height: 30px;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
 
         > .icon {
           width: 100%;
