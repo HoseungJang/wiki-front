@@ -1,35 +1,22 @@
+import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import ReactMarkdown from "react-markdown";
 
-import { useMarkdown } from "../../hooks/useMarkdown";
-
-import { HeadingBlock } from "../../components/MarkdownRenderers/HeadingBlock";
-import { AnchorBlock } from "../../components/MarkdownRenderers/AnchorBlock";
+import { Main } from "./Main";
+import { Sub } from "./Sub";
 
 export function Document() {
-  const markdown = useMarkdown();
-
   return (
     <S.Container>
-      {markdown ? (
-        <ReactMarkdown
-          components={{
-            h1: HeadingBlock,
-            h2: HeadingBlock,
-            h3: HeadingBlock,
-            h4: HeadingBlock,
-            a: AnchorBlock,
-          }}
-        >
-          {markdown}
-        </ReactMarkdown>
-      ) : null}
+      <Switch>
+        <Route exact path="" component={Main} />
+        <Route component={Sub} />
+      </Switch>
     </S.Container>
   );
 }
 
 export const S = {
-  Container: styled.div`
+  Container: styled.main`
     padding: 20px 200px;
   `,
 };
