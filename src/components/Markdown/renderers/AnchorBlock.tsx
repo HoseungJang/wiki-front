@@ -4,9 +4,7 @@ import styled from "styled-components";
 import { Color } from "../../../constants/color";
 
 export function AnchorBlock(props: any) {
-  return props.href.startsWith("#") ? (
-    <S.Container href={props.href}>{props.children}</S.Container>
-  ) : props.href.startsWith("http") ? (
+  return props.href.startsWith("#") || props.href.startsWith("http") ? (
     <S.Container href={props.href}>{props.children}</S.Container>
   ) : (
     <S.Container as={Link} to={props.href}>
