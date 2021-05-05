@@ -1,9 +1,13 @@
 import { Octokit } from "@octokit/rest";
 import { decode } from "js-base64";
+import { AES, enc } from "crypto-js";
 
 export class Github {
   private static readonly instance = new Octokit({
-    auth: process.env.REACT_APP_GITHUB_TOKEN_PRE + process.env.REACT_APP_GITHUB_TOKEN_POST,
+    auth: AES.decrypt(
+      process.env.REACT_APP_ENCRYPTED_GITHUB_TOKEN,
+      process.env.REACT_APP_CRYPTO_KEY
+    ).toString(enc.Utf8),
     baseUrl: "https://api.github.com",
   });
 
