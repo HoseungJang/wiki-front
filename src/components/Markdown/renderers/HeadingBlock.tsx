@@ -7,6 +7,6 @@ export function HeadingBlock({
   level: number;
   children: any;
 }) {
-  const id = (children[0] as string).replace(/ /g, "-");
+  const id = (children[0] as string).replace(/\?/g, "").replace(/ /g, "-");
   return createElement(`h${level}`, { id }, children);
 }
