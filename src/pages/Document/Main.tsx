@@ -4,7 +4,7 @@ import { Markdown } from "../../components/Markdown";
 import { useMarkdown } from "../../hooks/useMarkdown";
 
 export function Main() {
-  const content = useMarkdown("README.md");
+  const content = useMarkdown("/README.md");
 
   return (
     <S.Container>{content ? <Markdown content={content} /> : null}</S.Container>
