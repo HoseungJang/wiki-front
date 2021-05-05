@@ -1,12 +1,14 @@
+import { useLocation } from "react-router";
 import styled from "styled-components";
 
-import { Markdown } from "../../components/Markdown";
 import { useMarkdown } from "../../hooks/useMarkdown";
 
+import { Markdown } from "../../components/Markdown";
+
 export function Sub() {
-  const content = useMarkdown(
-    decodeURIComponent(window.location.pathname.slice(1))
-  );
+  const location = useLocation();
+
+  const content = useMarkdown(decodeURIComponent(location.pathname.slice(1)));
 
   return (
     <S.Container>{content ? <Markdown content={content} /> : null}</S.Container>
@@ -14,7 +16,5 @@ export function Sub() {
 }
 
 export const S = {
-  Container: styled.div`
-    padding: 20px 200px;
-  `,
+  Container: styled.div``,
 };
