@@ -8,7 +8,7 @@ export function Document() {
   return (
     <S.Container>
       <Switch>
-        <Route exact path="" component={Main} />
+        <Route exact path="/" component={Main} />
         <Route component={Sub} />
       </Switch>
     </S.Container>
