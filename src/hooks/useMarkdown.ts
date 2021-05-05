@@ -12,10 +12,10 @@ export function useMarkdown(path: string) {
       try {
         return await Github.getContent(path);
       } catch (error) {
-        history.push("/not-found");
+        history.replace("/not-found");
       }
     },
-    { dedupingInterval: 3600 * 60, shouldRetryOnError: false }
+    { shouldRetryOnError: false }
   );
 
   return data ?? null;
