@@ -6,13 +6,24 @@ import { Color } from "../../../constants/color";
 export function AnchorBlock(props: any) {
   return props.href.startsWith("#") ? (
     <S.Hash href={props.href}>{props.children}</S.Hash>
+  ) : props.href.startsWith("http") ? (
+    <S.Anchor href={props.href}>{props.children}</S.Anchor>
   ) : (
-    <S.Path to={props.href}>{props.children}</S.Path>
+    <S.Link to={props.href}>{props.children}</S.Link>
   );
 }
 
 const S = {
-  Path: styled(Link)`
+  Anchor: styled.a`
+    font-weight: bold;
+    color: ${Color.Blue300};
+    text-decoration: none;
+
+    &:hover {
+      color: ${Color.Blue200};
+    }
+  `,
+  Link: styled(Link)`
     font-weight: bold;
     color: ${Color.Blue300};
     text-decoration: none;
