@@ -8,7 +8,7 @@ export class Github {
   });
 
   private static readonly owner = "HoseungJang";
-  private static readonly repo = "wiki";
+  private static readonly repo = "wiki-base";
 
   public static async getContent(path: string) {
     const { content } = (
