@@ -1,5 +1,5 @@
 {
-  "name": "wiki-frontend",
+  "name": "wiki",
   "private": true,
   "dependencies": {
     "@octokit/rest": "^18.5.3",
