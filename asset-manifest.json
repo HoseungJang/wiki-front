@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/wiki-front/static/js/main.dfc0db5c.chunk.js",
-    "main.js.map": "/wiki-front/static/js/main.dfc0db5c.chunk.js.map",
-    "runtime-main.js": "/wiki-front/static/js/runtime-main.8ce296bc.js",
-    "runtime-main.js.map": "/wiki-front/static/js/runtime-main.8ce296bc.js.map",
-    "static/js/2.564851c7.chunk.js": "/wiki-front/static/js/2.564851c7.chunk.js",
-    "static/js/2.564851c7.chunk.js.map": "/wiki-front/static/js/2.564851c7.chunk.js.map",
+    "main.js": "/wiki-front/static/js/main.9fd93eec.chunk.js",
+    "main.js.map": "/wiki-front/static/js/main.9fd93eec.chunk.js.map",
+    "runtime-main.js": "/wiki-front/static/js/runtime-main.739acbfc.js",
+    "runtime-main.js.map": "/wiki-front/static/js/runtime-main.739acbfc.js.map",
+    "static/js/2.cb1d61e6.chunk.js": "/wiki-front/static/js/2.cb1d61e6.chunk.js",
+    "static/js/2.cb1d61e6.chunk.js.map": "/wiki-front/static/js/2.cb1d61e6.chunk.js.map",
     "index.html": "/wiki-front/index.html",
-    "static/js/2.564851c7.chunk.js.LICENSE.txt": "/wiki-front/static/js/2.564851c7.chunk.js.LICENSE.txt"
+    "static/js/2.cb1d61e6.chunk.js.LICENSE.txt": "/wiki-front/static/js/2.cb1d61e6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ce296bc.js",
-    "static/js/2.564851c7.chunk.js",
-    "static/js/main.dfc0db5c.chunk.js"
+    "static/js/runtime-main.739acbfc.js",
+    "static/js/2.cb1d61e6.chunk.js",
+    "static/js/main.9fd93eec.chunk.js"
   ]
 }
