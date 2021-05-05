@@ -6,7 +6,9 @@ export function AnchorBlock(props: any) {
   return props.href.startsWith("#") ? (
     <S.Hash href={props.href}>{props.children}</S.Hash>
   ) : (
-    <S.Path href={props.href}>{props.children}</S.Path>
+    <S.Path href={`${process.env.PUBLIC_URL}${props.href}`}>
+      {props.children}
+    </S.Path>
   );
 }
 
