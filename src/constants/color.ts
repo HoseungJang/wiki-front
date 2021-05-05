@@ -5,4 +5,6 @@ export enum Color {
   Purple300 = "#8258FA",
   Purple200 = "#9F81F7",
   Purple100 = "#BCA9F5",
+  White = "#FFFFFF",
+  Grey50 = "#F2F2F2",
 }
