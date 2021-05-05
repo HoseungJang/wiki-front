@@ -1,17 +1,19 @@
 import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
+import slug from "remark-slug";
 
-import { HeadingBlock } from "./renderers/HeadingBlock";
 import { AnchorBlock } from "./renderers/AnchorBlock";
+import { ImageBlock } from "./renderers/ImageBlock";
+import { CodeBlock } from "./renderers/CodeBlock";
 
 export function Markdown({ content }: { content: string }) {
   return (
     <ReactMarkdown
+      remarkPlugins={[gfm, slug]}
       components={{
-        h1: HeadingBlock,
-        h2: HeadingBlock,
-        h3: HeadingBlock,
-        h4: HeadingBlock,
         a: AnchorBlock,
+        img: ImageBlock,
+        code: CodeBlock,
       }}
     >
       {content}
