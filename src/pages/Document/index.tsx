@@ -3,13 +3,17 @@ import styled from "styled-components";
 
 import { Color } from "../../constants/color";
 
+import { useTheme, Theme } from "../../contexts/Theme";
+
 import { Navigation, documentNavigationHeight } from "./Navigation";
 import { Main } from "./Main";
 import { Sub } from "./Sub";
 
 export function Document() {
+  const { currentTheme } = useTheme();
+
   return (
-    <S.Container>
+    <S.Container t={currentTheme}>
       <Navigation />
       <Switch>
         <Route exact path="/" component={Main} />
@@ -20,7 +24,7 @@ export function Document() {
 }
 
 export const S = {
-  Container: styled.main`
+  Container: styled.main<{ t: Theme }>`
     flex: 1;
 
     position: relative;
@@ -35,6 +39,9 @@ export const S = {
 
     box-sizing: border-box;
 
-    background-color: ${Color.White};
+    background-color: ${({ t }) =>
+      ({ light: Color.White, dark: Color.Black }[t])};
+
+    overflow-x: hidden;
   `,
 };
