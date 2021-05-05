@@ -25,7 +25,7 @@ export const S = {
 
     position: relative;
 
-    width: 800px;
+    width: 100%;
     max-width: 800px;
 
     display: flex;
