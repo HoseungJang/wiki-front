@@ -1,5 +1,5 @@
 import { render } from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
 import { ScrollToTop } from "./ScrollToTop";
@@ -19,10 +19,12 @@ const GlobalStyle = createGlobalStyle`
 render(
   <>
     <GlobalStyle />
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
-      <Route exact path="/not-found" component={NotFound} />
-      <Route component={Document} />
+      <Switch>
+        <Route exact path="/not-found" component={NotFound} />
+        <Route component={Document} />
+      </Switch>
     </BrowserRouter>
   </>,
   document.getElementById("root")
