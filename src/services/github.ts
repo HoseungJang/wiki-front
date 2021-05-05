@@ -3,6 +3,7 @@ import { decode } from "js-base64";
 
 export class Github {
   private static readonly instance = new Octokit({
+    auth: process.env.REACT_APP_GITHUB_TOKEN_PRE + process.env.REACT_APP_GITHUB_TOKEN_POST,
     baseUrl: "https://api.github.com",
   });
 
