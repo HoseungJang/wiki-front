@@ -24,6 +24,6 @@ const S = {
     background-color: ${({ t }) =>
       ({ light: Color.Grey50, dark: Color.Black50 }[t])};
 
-    color: ${({ t }) => ({ light: Color.Black, dark: Color.Grey100 }[t])};
+    color: ${({ t }) => ({ light: Color.Black, dark: Color.Grey300 }[t])};
   `,
 };

@@ -86,11 +86,11 @@ const S = {
           height: 100%;
 
           color: ${({ t }: { t: Theme }) =>
-            ({ light: Color.Blue300, dark: Color.White }[t])};
+            ({ light: Color.Blue300, dark: Color.Grey300 }[t])};
 
           &:hover {
             color: ${({ t }: { t: Theme }) =>
-              ({ light: Color.Blue200, dark: Color.Grey200 }[t])};
+              ({ light: Color.Blue200, dark: Color.Grey50 }[t])};
           }
         }
       }
@@ -110,11 +110,11 @@ const S = {
         height: 30px;
 
         color: ${({ t }: { t: Theme }) =>
-          ({ light: Color.Orange100, dark: Color.White }[t])};
+          ({ light: Color.Orange100, dark: Color.Grey300 }[t])};
 
         &:hover {
           color: ${({ t }: { t: Theme }) =>
-            ({ light: Color.Orange50, dark: Color.Grey200 }[t])};
+            ({ light: Color.Orange50, dark: Color.Grey50 }[t])};
         }
       }
     }
