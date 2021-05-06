@@ -64,11 +64,11 @@ const S = {
     box-sizing: border-box;
 
     background-color: ${({ t }: { t: Theme }) =>
-      ({ light: Color.White, dark: Color.Black }[t])};
+      ({ light: Color.White, dark: Color.Black200 }[t])};
 
     box-shadow: 1px 1px 10px
       ${({ t }: { t: Theme }) =>
-        ({ light: Color.Grey50, dark: Color.Black50 }[t])};
+        ({ light: Color.Grey50, dark: Color.Black }[t])};
 
     > .links {
       display: flex;
