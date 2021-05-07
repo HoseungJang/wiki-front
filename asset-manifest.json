@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/wiki-front/static/js/main.2334cb2e.chunk.js",
-    "main.js.map": "/wiki-front/static/js/main.2334cb2e.chunk.js.map",
+    "main.js": "/wiki-front/static/js/main.9b5f7afc.chunk.js",
+    "main.js.map": "/wiki-front/static/js/main.9b5f7afc.chunk.js.map",
     "runtime-main.js": "/wiki-front/static/js/runtime-main.739acbfc.js",
     "runtime-main.js.map": "/wiki-front/static/js/runtime-main.739acbfc.js.map",
     "static/js/2.a6bf0d49.chunk.js": "/wiki-front/static/js/2.a6bf0d49.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.739acbfc.js",
     "static/js/2.a6bf0d49.chunk.js",
-    "static/js/main.2334cb2e.chunk.js"
+    "static/js/main.9b5f7afc.chunk.js"
   ]
 }
