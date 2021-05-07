@@ -22,8 +22,7 @@ const S = {
 
           box-sizing: border-box;
 
-          border: 1px solid
-            ${({ t }) => ({ light: Color.Grey200, dark: Color.Black50 }[t])};
+          border: 1px solid ${({ t }) => ({ light: Color.Grey200, dark: Color.Black50 }[t])};
 
           &:not(:last-child) {
             border-right: none;
@@ -39,8 +38,7 @@ const S = {
 
           box-sizing: border-box;
 
-          border: 1px solid
-            ${({ t }) => ({ light: Color.Grey200, dark: Color.Black50 }[t])};
+          border: 1px solid ${({ t }) => ({ light: Color.Grey200, dark: Color.Black50 }[t])};
           border-top: none;
 
           &:not(:last-child) {

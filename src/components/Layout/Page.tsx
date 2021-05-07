@@ -21,8 +21,7 @@ const S = {
     flex-direction: column;
     align-items: center;
 
-    background-color: ${({ t }) =>
-      ({ light: Color.Grey50, dark: Color.Black50 }[t])};
+    background-color: ${({ t }) => ({ light: Color.Grey50, dark: Color.Black50 }[t])};
 
     color: ${({ t }) => ({ light: Color.Black, dark: Color.Grey300 }[t])};
   `,

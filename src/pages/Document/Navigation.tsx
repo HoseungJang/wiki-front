@@ -63,12 +63,9 @@ const S = {
 
     box-sizing: border-box;
 
-    background-color: ${({ t }: { t: Theme }) =>
-      ({ light: Color.White, dark: Color.Black200 }[t])};
+    background-color: ${({ t }: { t: Theme }) => ({ light: Color.White, dark: Color.Black200 }[t])};
 
-    box-shadow: 1px 1px 10px
-      ${({ t }: { t: Theme }) =>
-        ({ light: Color.Grey50, dark: Color.Black }[t])};
+    box-shadow: 1px 1px 10px ${({ t }: { t: Theme }) => ({ light: Color.Grey50, dark: Color.Black }[t])};
 
     > .links {
       display: flex;
@@ -85,12 +82,10 @@ const S = {
           width: 100%;
           height: 100%;
 
-          color: ${({ t }: { t: Theme }) =>
-            ({ light: Color.Blue300, dark: Color.Grey300 }[t])};
+          color: ${({ t }: { t: Theme }) => ({ light: Color.Blue300, dark: Color.Grey300 }[t])};
 
           &:hover {
-            color: ${({ t }: { t: Theme }) =>
-              ({ light: Color.Blue200, dark: Color.Grey50 }[t])};
+            color: ${({ t }: { t: Theme }) => ({ light: Color.Blue200, dark: Color.Grey50 }[t])};
           }
         }
       }
@@ -109,12 +104,10 @@ const S = {
         width: 30px;
         height: 30px;
 
-        color: ${({ t }: { t: Theme }) =>
-          ({ light: Color.Orange100, dark: Color.Grey300 }[t])};
+        color: ${({ t }: { t: Theme }) => ({ light: Color.Orange100, dark: Color.Grey300 }[t])};
 
         &:hover {
-          color: ${({ t }: { t: Theme }) =>
-            ({ light: Color.Orange50, dark: Color.Grey50 }[t])};
+          color: ${({ t }: { t: Theme }) => ({ light: Color.Orange50, dark: Color.Grey50 }[t])};
         }
       }
     }

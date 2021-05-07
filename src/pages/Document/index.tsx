@@ -39,8 +39,7 @@ export const S = {
 
     box-sizing: border-box;
 
-    background-color: ${({ t }) =>
-      ({ light: Color.White, dark: Color.Black100 }[t])};
+    background-color: ${({ t }) => ({ light: Color.White, dark: Color.Black100 }[t])};
 
     overflow-x: hidden;
   `,

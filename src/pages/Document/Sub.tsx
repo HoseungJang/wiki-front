@@ -10,9 +10,7 @@ export function Sub() {
 
   const content = useMarkdown(decodeURIComponent(location.pathname));
 
-  return (
-    <S.Container>{content ? <Markdown content={content} /> : null}</S.Container>
-  );
+  return <S.Container>{content ? <Markdown content={content} /> : null}</S.Container>;
 }
 
 export const S = {

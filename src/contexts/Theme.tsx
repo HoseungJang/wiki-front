@@ -1,10 +1,4 @@
-import {
-  createContext,
-  ReactNode,
-  useCallback,
-  useContext,
-  useState,
-} from "react";
+import { createContext, ReactNode, useCallback, useContext, useState } from "react";
 
 export enum Theme {
   Light = "light",
@@ -23,8 +17,7 @@ const themeStoreKey = "__CURRENT_THEME";
 export function ThemeContextProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     try {
-      return (window.localStorage.getItem(themeStoreKey) ??
-        Theme.Light) as Theme;
+      return (window.localStorage.getItem(themeStoreKey) ?? Theme.Light) as Theme;
     } catch (error) {
       return Theme.Light;
     }
