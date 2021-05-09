@@ -12,6 +12,7 @@ export enum Color {
   Black = "#000000",
   Grey300 = "#CACACA",
   Grey200 = "#D8D8D8",
+  Grey100 = "#E6E6E6",
   Grey50 = "#F2F2F2",
   Orange100 = "#FFBF00",
   Orange50 = "#F7D358",
