@@ -44,15 +44,16 @@ export function Navigation() {
 
 const S = {
   Container: styled.div<{ t: Theme }>`
-    position: absolute;
+    position: fixed;
 
     top: 0;
-    left: 0;
-    right: 0;
+    left: auto;
+    right: auto;
 
     z-index: 1;
 
     width: 100%;
+    max-width: 800px;
     height: ${documentNavigationHeight}px;
 
     display: flex;

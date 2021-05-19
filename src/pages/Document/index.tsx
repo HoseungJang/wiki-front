@@ -13,13 +13,15 @@ export function Document() {
   const { currentTheme } = useTheme();
 
   return (
-    <S.Container t={currentTheme}>
+    <>
       <Navigation />
-      <Switch>
-        <Route exact path="/" component={Main} />
-        <Route component={Sub} />
-      </Switch>
-    </S.Container>
+      <S.Container t={currentTheme}>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route component={Sub} />
+        </Switch>
+      </S.Container>
+    </>
   );
 }
 

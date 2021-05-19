@@ -4,6 +4,8 @@ import useSWR from "swr";
 
 import { Github } from "../services/github";
 
+import { documentNavigationHeight } from "../pages/Document/Navigation";
+
 export function useMarkdown(path: string) {
   const history = useHistory();
 
@@ -25,7 +27,7 @@ export function useMarkdown(path: string) {
         const targetElement = document.getElementById(decodeURIComponent(history.location.hash.slice(1)));
 
         if (targetElement) {
-          window.scrollTo({ top: targetElement.offsetTop, behavior: "smooth" });
+          window.scrollTo({ top: targetElement.offsetTop - documentNavigationHeight, behavior: "smooth" });
         } else if (history.action !== "POP") {
           window.scrollTo({ top: 0, behavior: "auto" });
         }
