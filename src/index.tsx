@@ -1,11 +1,10 @@
 import { render } from "react-dom";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
 import { ThemeContextProvider } from "./contexts/Theme";
 
 import { Page } from "./components/Layout/Page";
-import { ScrollToTop } from "./ScrollToTop";
 import { NotFound } from "./pages/NotFound";
 import { Document } from "./pages/Document";
 
@@ -34,16 +33,15 @@ const GlobalStyle = createGlobalStyle`
 
 render(
   <ThemeContextProvider>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <GlobalStyle />
       <Page>
-        <ScrollToTop />
         <Switch>
           <Route exact path="/not-found" component={NotFound} />
           <Route component={Document} />
         </Switch>
       </Page>
-    </BrowserRouter>
+    </HashRouter>
   </ThemeContextProvider>,
   document.getElementById("root")
 );
