@@ -20,11 +20,18 @@ export function useMarkdown(path: string) {
   );
 
   useEffect(() => {
-    if (history.location.hash !== "" && data) {
-      window.location.hash = "";
-      window.location.hash = history.location.hash;
+    if (data !== undefined) {
+      return history.listen(() => {
+        const targetElement = document.getElementById(decodeURIComponent(history.location.hash.slice(1)));
+
+        if (targetElement) {
+          window.scrollTo({ top: targetElement.offsetTop, behavior: "smooth" });
+        } else if (history.action !== "POP") {
+          window.scrollTo({ top: 0, behavior: "auto" });
+        }
+      });
     }
-  }, [history, data]);
+  }, [data, history]);
 
   return data ?? null;
 }
