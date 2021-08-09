@@ -3,16 +3,14 @@ import styled from "styled-components";
 
 import { Color } from "../../../constants/color";
 
-import { useTheme, Theme } from "../../../contexts/Theme";
-
 export function TableBlock({ children }: { children: ReactNode }) {
-  const { currentTheme } = useTheme();
-
-  return <S.Container t={currentTheme}>{children}</S.Container>;
+  return <S.Container>{children}</S.Container>;
 }
 
 const S = {
-  Container: styled.table<{ t: Theme }>`
+  Container: styled.table`
+    width: fit-content;
+
     border-spacing: 0;
 
     > thead {
@@ -22,7 +20,7 @@ const S = {
 
           box-sizing: border-box;
 
-          border: 1px solid ${({ t }) => ({ light: Color.Grey200, dark: Color.Black50 }[t])};
+          border: 1px solid ${Color.Grey200};
 
           &:not(:last-child) {
             border-right: none;
@@ -38,7 +36,7 @@ const S = {
 
           box-sizing: border-box;
 
-          border: 1px solid ${({ t }) => ({ light: Color.Grey200, dark: Color.Black50 }[t])};
+          border: 1px solid ${Color.Grey200};
           border-top: none;
 
           &:not(:last-child) {

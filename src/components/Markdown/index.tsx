@@ -4,10 +4,12 @@ import slug from "remark-slug";
 import styled from "styled-components";
 
 import { AnchorBlock } from "./renderers/AnchorBlock";
-import { ImageBlock } from "./renderers/ImageBlock";
 import { CodeBlock } from "./renderers/CodeBlock";
 import { TableBlock } from "./renderers/TableBlock";
+import { ImageBlock } from "./renderers/ImageBlock";
 import { BlockquoteBlock } from "./renderers/BlockquoteBlock";
+import { UListBlock } from "./renderers/UListBlock";
+import { LIBlock } from "./renderers/LIBlock";
 
 export function Markdown({ content }: { content: string }) {
   return (
@@ -16,10 +18,12 @@ export function Markdown({ content }: { content: string }) {
         remarkPlugins={[gfm, slug]}
         components={{
           a: AnchorBlock,
-          img: ImageBlock,
           code: CodeBlock,
           table: TableBlock,
+          img: ImageBlock,
           blockquote: BlockquoteBlock,
+          ul: UListBlock,
+          li: LIBlock,
         }}
       >
         {content}
@@ -32,5 +36,7 @@ const S = {
   Container: styled.div`
     display: flex;
     flex-direction: column;
+
+    font-size: 1.8rem;
   `,
 };
