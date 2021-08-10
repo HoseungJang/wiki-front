@@ -44,5 +44,9 @@ export const S = {
     background-color: ${({ t }) => ({ light: Color.White, dark: Color.Black100 }[t])};
 
     overflow-x: hidden;
+
+    @media screen and (max-width: 768px) {
+      padding: ${documentNavigationHeight}px 20px 20px;
+    }
   `,
 };
