@@ -46,6 +46,10 @@ const GlobalStyle = createGlobalStyle`
         transition: background-color 0.3s;
       }
     }
+
+    @media screen and (max-width: 768px) {
+      font-size: 8px;
+    }
   }
 `;
 
