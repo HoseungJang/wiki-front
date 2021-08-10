@@ -16,7 +16,7 @@ export function TableBlock({ children }: { children: ReactNode }) {
 }
 
 const S = {
-  Container: styled.table<{ t: Theme }>`
+  Container: styled.div<{ t: Theme }>`
     width: 100%;
 
     word-break: keep-all;
