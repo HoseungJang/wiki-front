@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
+import { Github } from "../../../services/github";
+
 export function ImageBlock(props: any) {
-  return <S.Container src={props.src} alt="" />;
+  return <S.Container src={Github.getContentURL(props.src)} alt="" />;
 }
 
 const S = {
