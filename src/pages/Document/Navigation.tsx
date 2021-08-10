@@ -66,7 +66,7 @@ const S = {
 
     background-color: ${({ t }: { t: Theme }) => ({ light: Color.White, dark: Color.Black200 }[t])};
 
-    box-shadow: 1px 1px 10px ${({ t }: { t: Theme }) => ({ light: Color.Grey50, dark: Color.Black }[t])};
+    border-bottom: 1px solid ${({ t }: { t: Theme }) => ({ light: Color.Grey50, dark: Color.Black200 }[t])};
 
     > .links {
       display: flex;
