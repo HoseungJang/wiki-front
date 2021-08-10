@@ -3,16 +3,20 @@ import styled from "styled-components";
 
 import { Color } from "../../../constants/color";
 
+import { useTheme, Theme } from "../../../contexts/Theme";
+
 export function TableBlock({ children }: { children: ReactNode }) {
+  const { currentTheme } = useTheme();
+
   return (
-    <S.Container>
+    <S.Container t={currentTheme}>
       <table>{children}</table>
     </S.Container>
   );
 }
 
 const S = {
-  Container: styled.div`
+  Container: styled.table<{ t: Theme }>`
     width: 100%;
 
     word-break: keep-all;
@@ -31,7 +35,7 @@ const S = {
 
             box-sizing: border-box;
 
-            border: 1px solid ${Color.Grey200};
+            border: 1px solid ${({ t }) => ({ light: Color.Grey200, dark: Color.Black50 }[t])};
 
             &:not(:last-child) {
               border-right: none;
@@ -47,7 +51,7 @@ const S = {
 
             box-sizing: border-box;
 
-            border: 1px solid ${Color.Grey200};
+            border: 1px solid ${({ t }) => ({ light: Color.Grey200, dark: Color.Black50 }[t])};
             border-top: none;
 
             &:not(:last-child) {
