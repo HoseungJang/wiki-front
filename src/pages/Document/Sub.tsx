@@ -8,7 +8,7 @@ import { Markdown } from "../../components/Markdown";
 export function Sub() {
   const location = useLocation();
 
-  const content = useMarkdown(decodeURIComponent(location.pathname));
+  const content = useMarkdown(encodeURIComponent(decodeURIComponent(location.pathname)));
 
   return <S.Container>{content ? <Markdown content={content} /> : null}</S.Container>;
 }
