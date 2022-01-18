@@ -25,8 +25,8 @@ export function Markdown({ content }: { content: string }) {
           img: ImageBlock,
           blockquote: BlockquoteBlock,
           ul: UListBlock,
-          li: LIBlock,
           ol: OListBlock,
+          li: LIBlock,
           p: ParagraphBlock,
         }}
       >
