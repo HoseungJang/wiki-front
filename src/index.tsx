@@ -9,6 +9,8 @@ import { NotFound } from "./pages/NotFound";
 import { Document } from "./pages/Document";
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
   html, body {
     width: 100%;
     height: 100%;
@@ -17,15 +19,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
 
     font-size: 10px;
-    font-family: 'NEXON Lv2 Gothic';
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     line-height: 1.4;
-
-    @font-face {
-      font-family: 'NEXON Lv2 Gothic';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
 
     ul {
       margin: 0;
